@@ -32,7 +32,7 @@ pipeline {
                 echo '🧪 Smoke test de l application...'
                 sh """
                 docker run -d --name test-${BUILD_NUMBER} -p 5001:5000 ${IMAGE_TAG}
-                sleep 5
+                sleep 10
                 curl -f http://localhost:5001 || exit 1
                 docker stop test-${BUILD_NUMBER}
                 docker rm test-${BUILD_NUMBER}
