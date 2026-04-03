@@ -33,7 +33,7 @@ pipeline {
                 sh """
                 docker run -d --name test-${BUILD_NUMBER} -p 5001:5000 ${IMAGE_TAG}
                 sleep 10
-                curl -f http://localhost:5001 || exit 1
+                curl -f http://192.168.70.128:5001 || exit 1
                 docker stop test-${BUILD_NUMBER}
                 docker rm test-${BUILD_NUMBER}
                 """
@@ -56,7 +56,7 @@ pipeline {
                 ${IMAGE_NAME}:latest
                 """
 
-                echo "✅ Application disponible sur http://localhost:${APP_PORT}"
+                echo "✅ Application disponible sur http://192.168.70.128:${APP_PORT}"
             }
         }
     }
