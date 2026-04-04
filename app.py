@@ -17,7 +17,7 @@ def home():
     <body style="font-family:Arial; margin:40px; background:#0D1117; color:white">
         <h1>🚀 Mon Application CI/CD</h1>
         <p>Version : <strong>{VERSION}</strong></p>
-        <p>Déployée automatiquement via Jenkins + Docker !</p>
+        <p>Déployée automatiquement via Jenkins + Docker + Test class  !</p>
         <p style="color:#56D364">✅ Pipeline exécuté avec succès</p>
     </body>
     </html>
